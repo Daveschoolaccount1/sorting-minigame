@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Can You Sort Faster Than A Machine?</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="home-screen" class="screen active">
+        <h1>Sort <span>Race</span></h1>
+        <p>Can you sort faster than a machine?</p>
+        <button id="btn-start" class="btn-primary">Start Game</button>
+    </div>
+
+    <div id="selection-screen" class="screen">
+        <h2>Game Settings</h2>
+        
+        <div class="settings-group">
+            <h3>Difficulty</h3>
+            <div class="options" id="difficulty-options">
+                <button class="btn-option active" data-diff="easy">Easy</button>
+                <button class="btn-option" data-diff="medium">Medium</button>
+                <button class="btn-option" data-diff="hard">Hard</button>
+            </div>
+        </div>
+
+        <div class="settings-group">
+            <h3>Machine Algorithm</h3>
+            <div class="options" id="algo-options">
+                <button class="btn-option active" data-algo="bubble">Bubble Sort</button>
+                <button class="btn-option" data-algo="insertion">Insertion Sort</button>
+                <button class="btn-option" data-algo="quick">Quick Sort</button>
+            </div>
+        </div>
+
+        <button id="btn-play" class="btn-primary">Play</button>
+    </div>
+
+    <div id="game-screen" class="screen">
+        <div class="header">
+            <div class="timer" id="timer">00:00:00</div>
+            <button id="btn-begin-sort" class="btn-action">Begin Race!</button>
+        </div>
+
+        <div class="arena">
+            <div class="player-zone">
+                <h3>You (Click 2 bars to swap)</h3>
+                <div class="array-container" id="player-array"></div>
+            </div>
+            
+            <div class="machine-zone">
+                <h3>Machine (<span id="display-algo">Algorithm</span>)</h3>
+                <div class="array-container" id="machine-array"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="result-screen" class="screen">
+        <h1 id="result-title">You Won!</h1>
+        <p id="result-message">You beat the machine by 2 seconds.</p>
+        <p class="final-time">Your Time: <span id="final-time"></span></p>
+        <button id="btn-home" class="btn-primary">Back to Home</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
